@@ -1,0 +1,247 @@
+
+body{
+    margin: 0;
+    background-color: #ccc;
+    font-family: Arial, "Helvetica Neue", "Segoe UI", sans-serif;
+  }
+  a{
+    text-decoration: none;
+    font-size: 14px;
+    color: #000;
+  }
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 37px;
+    margin: 15px 0;
+    border: none;
+    background-color: #EBEFF0;
+    border-radius: 5px;
+    text-align: left;
+    letter-spacing: 3px;
+    font-size: 15px;
+    padding: 6px 12px;
+  }
+  .search-section {
+    width: 60%;
+  }
+  
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4FC3F7;
+    padding: 0px 20px;
+  }
+  .login-section a {
+    color: #fff;
+    font-size: 16px;
+  }
+  .login-section a .fa {
+    margin-right: 8px;
+  }
+  
+  .section-content{
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+  }
+  .text-right{
+    text-align: right;
+  }
+  .left-section {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px 0px rgb(0, 0, 0, 22%);
+    position: relative;
+  }
+  .right-section{
+    flex: 0 0 75%;
+    max-width: 75%;
+    background-color: #fff;
+  }
+  .filter-header a {
+    margin: 0 6px;
+  }
+  .filter-header {
+    padding: 12px;
+    background-color: #ddd;
+  }
+  
+  .align-check {
+    display: flex;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  .checkbox-label label {
+    display: block;
+  }
+  .filter-box h4 {
+      margin: 0;
+      background-color: #ddd;
+      padding: 12px;
+  }
+  
+  .checkbox-label label {
+    display: block;
+    padding: 8px;
+  }
+  .filter-box {
+    padding: 20px;
+  }
+  .select-item {
+    padding: 12px;
+  }
+  .justify-content{
+    justify-content: space-between;
+  }
+  .select-item select {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.37rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .product-list {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .item-box-3 {
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+  
+  .item-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.37rem;
+    margin: 0 12px 20px;
+    height: 96%;
+  }
+  .product-img {
+    text-align: center;
+    display: block;
+    border-radius: 0.2rem 0.2rem 0 0;
+    height: 220px;
+    position: relative;
+  }
+  .product-img  img{
+      height: 100%;
+      max-width: 100%;
+      display: inline-block;
+      -o-object-fit: contain;
+      object-fit: contain;
+      width: auto;
+  }
+  .content{
+    padding: 20px;
+  }
+  .cart-item {
+      margin: 2px 0;
+      color: #fff;
+  }
+  .add-item{
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  .add-item .fa {
+    border: 2px solid #000;
+    padding: 4px;
+    margin-right: 6px;
+    border-radius: 60px;
+    height: 12px;
+    width: 12px;
+    text-align: center;
+  }
+  .product-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+  }
+  .footer-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #e5e2e2;
+    position: relative;
+    border-top: 1px solid #c4c4c4;
+  }
+  .logo-footer {
+    position: absolute;
+    right: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    top: 24px;
+    font-style: italic;
+  }
+  .color-name {
+    display: flex;
+  }
+  .color-name span {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    display: inline-block;
+    margin-left: 6px;
+  }
+
+  .search-field{
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+    display: flex;
+  }
+
+  .d-flex{
+    display: flex;
+    align-items: center;
+  }
+
+   .search-btn{
+     display: inline-block;
+    font-weight: 500;
+    color: #343a40;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.45rem 0.85rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #fff;
+    background-color: #3167eb;
+    border-color: #3167eb;
+    border-radius: 0.37rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.search-field input{
+  margin: 15px 10px 15px 0px;
+  text-align: center;
+}
+.filter-header .fa {
+  margin-right: 6px;
+}

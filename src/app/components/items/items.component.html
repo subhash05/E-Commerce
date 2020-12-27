@@ -1,0 +1,152 @@
+<div>
+    <div class="header-section">
+        <div class="logo">
+            <a href="#" class="brand-wrap">
+               LOGO
+            </a>
+        </div>
+        <div class="search-section">
+                <div class="input-group">
+                    <form class="input-container d-flex" [formGroup]="searchProd" (ngSubmit)="searchProduct()">
+                        <div class="form-group search-field">
+                            <input type="text"  class="form-control" name="productName" formControlName="productName" placeholder="search by product name" />
+                        </div>
+                        <div class="form-group">
+                            <button class="search-btn" type="submit" >search </button>
+                        </div>
+                    </form>
+                </div>
+        </div>
+        <div class="login-section">
+            <div><a href="#"><i class="fa fa-user-o" aria-hidden="true"></i>
+                    <span>Welcome {{currentUser.fullName}}</span>
+                </a></div>
+            <div class="cart-item"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span *ngIf="showItem"> {{cartValue}}</span> Item</div>
+        </div>
+    </div>
+</div>
+
+<div class="section-content">
+    <aside class="left-section">
+        <div class="filter-header text-right">
+            <a href="#">
+                <span>Filters</span>
+            </a>
+            <a href="#"><i class="fa fa-repeat" aria-hidden="true"></i>
+                <span>Reset Filter</span>
+            </a>
+        </div>
+
+        <div class="filter-box">
+            <h4>Color</h4>
+            <div class="align-check">
+                <div class="checkbox-label">
+                    <label for="c1"><input type="checkbox" name="c1" value="c1"> C1</label>
+                    <label for="c2"><input type="checkbox" name="c2" value="c2"> C2</label>
+                </div>
+                <div class="checkbox-label">
+                    <label for="c3"><input type="checkbox" name="c1" value="c3"> C3</label>
+                    <label for="c4"><input type="checkbox" name="c2" value="c4"> C4</label>
+                </div>
+                <div class="checkbox-label">
+                    <label for="c5"><input type="checkbox" name="c1" value="c5"> C5</label>
+                    <label for="c6"><input type="checkbox" name="c6" value="c6"> C6</label>
+                </div>
+                <div class="checkbox-label">
+                    <label for="c7"><input type="checkbox" name="c7" value="c7"> C7</label>
+                    <label for="c8"><input type="checkbox" name="c8" value="c8"> C8</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-box">
+            <h4>Brand</h4>
+            <div class="align-check">
+                <div class="checkbox-label">
+                    <label for="b1"><input type="checkbox" name="B1" value="B1"> B1</label>
+                    <label for="b2"><input type="checkbox" name="B2" value="B2"> B2</label>
+                </div>
+                <div class="checkbox-label">
+                    <label for="B3"><input type="checkbox" name="B1" value="B3"> B3</label>
+                    <label for="B4"><input type="checkbox" name="B2" value="B4"> B4</label>
+                </div>
+                <div class="checkbox-label">
+                    <label for="B5"><input type="checkbox" name="B1" value="B5"> B5</label>
+                    <label for="B6"><input type="checkbox" name="B6" value="B6"> B6</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-box">
+            <h4>Price</h4>
+                <div class="align-check justify-content">
+                    <div class="select-item">
+                        <select name="" id="min-dis">
+                            <option value="Min">Min</option>
+                            <option value="$10">$10</option>
+                        </select>
+                    </div>
+                    <div class="select-item">
+                        <select name="" id="max-dis">
+                            <option value="Min">Max</option>
+                            <option value="$10">$10</option>
+                        </select>
+                    </div>
+            </div>
+        </div>
+
+        <div class="filter-box">
+            <h4>Discount</h4>
+            <div class="align-check justify-content">
+                <div class="select-item">
+                    <select name="" id="min-dis">
+                        <option value="Min">Min</option>
+                        <option value="10">10%</option>
+                    </select>
+                </div>
+                <div class="select-item">
+                    <select name="" id="max-dis">
+                        <option value="Min">Max</option>
+                        <option value="10">10%</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    <main class="right-section">
+       <div class="product-list">
+           <div class="item-box-3" *ngFor="let products of allProducts">
+            <div class="item-box" >
+                <div class="product-img">
+                    <img [src]="products.image" alt="product img"> 
+                </div>
+                <div class="content">
+                    <div class="product-content">
+                        <div class="pr-name"><strong>Product</strong> {{products.title}}</div>
+                        <div class="color-name"><strong>Color</strong> <span [style.background-color]= "products.colour.color"></span></div>
+                    </div>
+                    <div class="product-content">
+                     <div class="pr-name"><strong>Brand</strong> {{products.brand}}</div>
+                      <button type="button" class="add-item" (click)="addItem()"><span><i class="fa fa-plus" aria-hidden="true"></i></span>Add</button>
+                     </div>
+                     <div class="product-content">
+                         <div class="price-count">${{products.price.final_price}}</div>
+                     </div>
+                 </div>
+             </div><!--end product box-->
+            </div>
+            
+           </div>
+
+    </main>
+</div>
+
+<div class="footer-section">
+    <div class="copy-right">
+        @abc.com
+    </div>
+    <div class="logo-footer">
+        sCart
+    </div>
+</div>
