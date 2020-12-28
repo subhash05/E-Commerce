@@ -32,48 +32,27 @@
             <a href="#">
                 <span>Filters</span>
             </a>
-            <a href="#"><i class="fa fa-repeat" aria-hidden="true"></i>
+            <span (click)="resetFilters()"><i class="fa fa-repeat" aria-hidden="true"></i>
                 <span>Reset Filter</span>
-            </a>
+            </span>
         </div>
 
         <div class="filter-box">
             <h4>Color</h4>
             <div class="align-check">
-                <div class="checkbox-label">
-                    <label for="c1"><input type="checkbox" name="c1" value="c1"> C1</label>
-                    <label for="c2"><input type="checkbox" name="c2" value="c2"> C2</label>
-                </div>
-                <div class="checkbox-label">
-                    <label for="c3"><input type="checkbox" name="c1" value="c3"> C3</label>
-                    <label for="c4"><input type="checkbox" name="c2" value="c4"> C4</label>
-                </div>
-                <div class="checkbox-label">
-                    <label for="c5"><input type="checkbox" name="c1" value="c5"> C5</label>
-                    <label for="c6"><input type="checkbox" name="c6" value="c6"> C6</label>
-                </div>
-                <div class="checkbox-label">
-                    <label for="c7"><input type="checkbox" name="c7" value="c7"> C7</label>
-                    <label for="c8"><input type="checkbox" name="c8" value="c8"> C8</label>
+                <div class="checkbox-label" *ngFor="let filter of colorFilter; let i = index">
+                    <label><input type="checkbox" name="c{{i}}" [checked]="filter.isChecked" (change)="selectColor(filter)"> {{filter.title}}</label>
                 </div>
             </div>
         </div>
 
-        <div class="filter-box">
+        <div class="filter-box brand-item-panel">
             <h4>Brand</h4>
             <div class="align-check">
-                <div class="checkbox-label">
-                    <label for="b1"><input type="checkbox" name="B1" value="B1"> B1</label>
-                    <label for="b2"><input type="checkbox" name="B2" value="B2"> B2</label>
+                <div class="checkbox-label" *ngFor="let filter of brandFilter; let i = index">
+                    <label for="b1"><input type="checkbox" name="B{{i}}" [checked]='filter.isChecked' (click)="selectBrand(filter)">{{filter.title}}</label>
                 </div>
-                <div class="checkbox-label">
-                    <label for="B3"><input type="checkbox" name="B1" value="B3"> B3</label>
-                    <label for="B4"><input type="checkbox" name="B2" value="B4"> B4</label>
-                </div>
-                <div class="checkbox-label">
-                    <label for="B5"><input type="checkbox" name="B1" value="B5"> B5</label>
-                    <label for="B6"><input type="checkbox" name="B6" value="B6"> B6</label>
-                </div>
+               
             </div>
         </div>
 

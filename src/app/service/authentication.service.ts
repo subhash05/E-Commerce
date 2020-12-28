@@ -59,6 +59,14 @@ export class AuthenticationService {
   }
 
 
+  getAllFilters() {
+    return this.http.get<any>("https://xebiascart.herokuapp.com/filters")
+        .pipe(map(data => {
+            return data;
+        }));
+  }
+
+
   searchByName(name: string) {
     return this.http.get<any>("https://xebiascart.herokuapp.com/products?title="+name)
         .pipe(map(data => {
